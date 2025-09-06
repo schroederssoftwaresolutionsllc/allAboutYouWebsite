@@ -1,4 +1,4 @@
-package com.mycompany.allaboutyouwebsite
+package com.schroederssoftwaresolutions.allaboutyouwebsite
 
 import io.flutter.embedding.android.FlutterActivity
 
