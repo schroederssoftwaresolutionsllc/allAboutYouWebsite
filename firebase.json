@@ -39,7 +39,6 @@
   },
   "functions": [
     {
-      "source": "functions",
       "codebase": "default",
       "ignore": [
         "venv",
@@ -48,8 +47,8 @@
         "firebase-debug.*.log",
         "*.local"
       ],
-      "runtime": "python313"
-
+      "source": "functions",
+      "runtime": "nodejs22"
     }
   ],
   "apphosting": [
@@ -62,7 +61,8 @@
         "firebase-debug.log",
         "firebase-debug.*.log",
         "functions"
-      ]
+      ],
+      "alwaysDeployFromSource": true
     },
     {
       "backendId": "allaboutyou",
@@ -73,7 +73,8 @@
         "firebase-debug.log",
         "firebase-debug.*.log",
         "functions"
-      ]
+      ],
+      "alwaysDeployFromSource": true
     },
     {
       "backendId": "allaboutyou",
@@ -84,7 +85,8 @@
         "firebase-debug.log",
         "firebase-debug.*.log",
         "functions"
-      ]
+      ],
+      "alwaysDeployFromSource": true
     },
     {
       "backendId": "allaboutyou",
@@ -95,10 +97,11 @@
         "firebase-debug.log",
         "firebase-debug.*.log",
         "functions"
-      ]
+      ],
+      "alwaysDeployFromSource": true
     },
     {
-      "backendId": "web-allaboutyou-backend",
+      "backendId": "allaboutyou",
       "rootDir": "/",
       "ignore": [
         "node_modules",
@@ -106,11 +109,36 @@
         "firebase-debug.log",
         "firebase-debug.*.log",
         "functions"
-      ]
+      ],
+      "alwaysDeployFromSource": true
+    },
+    {
+      "backendId": "allaboutyou",
+      "rootDir": "/",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "functions"
+      ],
+      "alwaysDeployFromSource": true
+    },
+    {
+      "backendId": "allaboutyou",
+      "rootDir": "/",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "functions"
+      ],
+      "alwaysDeployFromSource": true
     }
   ],
   "hosting": {
-    "public": "public",
+    "public": "build/web",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -124,7 +152,8 @@
     ]
   },
   "storage": {
-    "rules": "storage.rules"
+    "rules": "storage.rules",
+    "bucket": "allaboutyouwebsite.firebasestorage.app"
   },
   "remoteconfig": {
     "template": "remoteconfig.template.json"

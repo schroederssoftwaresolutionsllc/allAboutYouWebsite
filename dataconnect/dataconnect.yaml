@@ -5,7 +5,7 @@ schema:
   source: "./schema"
   datasource:
     postgresql:
-      database: "fdcdb-6"
+      database: "fdcdb-7"
       cloudSql:
         instanceId: "allaboutyouwebsite-fdc"
         # schemaValidation: "STRICT"     # STRICT mode makes Postgres schema match Data Connect exactly.

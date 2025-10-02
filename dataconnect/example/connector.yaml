@@ -6,6 +6,3 @@ generate:
       packageJsonDir: ..\..\functions
       react: false
       angular: false
-  dartSdk:
-    - outputDir: ..\..\lib\dataconnect_generated
-      package: dataconnect_generated
