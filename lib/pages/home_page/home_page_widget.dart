@@ -291,7 +291,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                               enlargeFactor: 0.25,
                               enableInfiniteScroll: true,
                               scrollDirection: Axis.horizontal,
-                              autoPlay: false,
+                              autoPlay: true,
+                              autoPlayAnimationDuration:
+                                  Duration(milliseconds: 4000),
+                              autoPlayInterval:
+                                  Duration(milliseconds: (4000 + 1000)),
+                              autoPlayCurve: Curves.linear,
+                              pauseAutoPlayInFiniteScroll: true,
                               onPageChanged: (index, _) =>
                                   _model.carouselCurrentIndex = index,
                             ),
