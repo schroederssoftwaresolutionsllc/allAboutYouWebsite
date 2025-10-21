@@ -1,7 +1,9 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -123,7 +125,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         children: [
                           Padding(
                             padding: EdgeInsets.all(20.0),
-                            child: Text(
+                            child: AutoSizeText(
                               'All About You',
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
@@ -147,7 +149,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   ),
                             ),
                           ),
-                          Text(
+                          AutoSizeText(
                             'Bridal Consulting and Planning',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
@@ -178,7 +180,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           color: FlutterFlowTheme.of(context).primaryText,
                         ),
                       ),
-                      Text(
+                      AutoSizeText(
                         'Gallery',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               font: GoogleFonts.meddon(
@@ -198,27 +200,37 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                   .fontStyle,
                             ),
                       ),
-                      Text(
-                        'Wedding Packages',
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              font: GoogleFonts.meddon(
-                                fontWeight: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontWeight,
-                                fontStyle: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .fontStyle,
-                              ),
-                              letterSpacing: 0.0,
-                              fontWeight: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontWeight,
-                              fontStyle: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .fontStyle,
-                            ),
+                      InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          context.pushNamed(PackagesWidget.routeName);
+                        },
+                        child: AutoSizeText(
+                          'Wedding Packages',
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    font: GoogleFonts.meddon(
+                                      fontWeight: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontWeight,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .fontStyle,
+                                    ),
+                                    letterSpacing: 0.0,
+                                    fontWeight: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontWeight,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .fontStyle,
+                                  ),
+                        ),
                       ),
-                      Text(
+                      AutoSizeText(
                         'Contact Us',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               font: GoogleFonts.meddon(
