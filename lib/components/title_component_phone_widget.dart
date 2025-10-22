@@ -47,13 +47,13 @@ class _TitleComponentPhoneWidgetState extends State<TitleComponentPhoneWidget> {
       mainAxisSize: MainAxisSize.min,
       children: [
         Padding(
-          padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+          padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 20.0),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 20.0, 0.0),
                 child: FlutterFlowIconButton(
                   borderRadius: 8.0,
                   buttonSize: 40.0,
@@ -69,7 +69,7 @@ class _TitleComponentPhoneWidgetState extends State<TitleComponentPhoneWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: FlutterFlowIconButton(
                   borderRadius: 8.0,
                   buttonSize: 40.0,
@@ -85,7 +85,7 @@ class _TitleComponentPhoneWidgetState extends State<TitleComponentPhoneWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 10.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 10.0, 0.0),
                 child: FlutterFlowIconButton(
                   borderRadius: 8.0,
                   buttonSize: 40.0,
@@ -107,26 +107,23 @@ class _TitleComponentPhoneWidgetState extends State<TitleComponentPhoneWidget> {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
-              child: AutoSizeText(
-                'All About You',
-                minFontSize: 20.0,
-                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      font: GoogleFonts.meddon(
-                        fontWeight:
-                            FlutterFlowTheme.of(context).bodyMedium.fontWeight,
-                        fontStyle:
-                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                      ),
-                      fontSize: 30.0,
-                      letterSpacing: 0.0,
+            AutoSizeText(
+              'All About You',
+              minFontSize: 20.0,
+              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                    font: GoogleFonts.meddon(
                       fontWeight:
                           FlutterFlowTheme.of(context).bodyMedium.fontWeight,
                       fontStyle:
                           FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                     ),
-              ),
+                    fontSize: 35.0,
+                    letterSpacing: 0.0,
+                    fontWeight:
+                        FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                    fontStyle:
+                        FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                  ),
             ),
           ],
         ),
@@ -136,40 +133,35 @@ class _TitleComponentPhoneWidgetState extends State<TitleComponentPhoneWidget> {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () async {
-                    context.pushNamed(GalleryWidget.routeName);
-                  },
-                  child: AutoSizeText(
-                    'Gallery',
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          font: GoogleFonts.meddon(
-                            fontWeight: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .fontWeight,
-                            fontStyle: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .fontStyle,
-                          ),
-                          fontSize: 10.0,
-                          letterSpacing: 0.0,
+              InkWell(
+                splashColor: Colors.transparent,
+                focusColor: Colors.transparent,
+                hoverColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                onTap: () async {
+                  context.pushNamed(GalleryWidget.routeName);
+                },
+                child: AutoSizeText(
+                  'Gallery',
+                  style: FlutterFlowTheme.of(context).bodyMedium.override(
+                        font: GoogleFonts.meddon(
                           fontWeight: FlutterFlowTheme.of(context)
                               .bodyMedium
                               .fontWeight,
                           fontStyle:
                               FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                         ),
-                  ),
+                        fontSize: 10.0,
+                        letterSpacing: 0.0,
+                        fontWeight:
+                            FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                        fontStyle:
+                            FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                      ),
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -200,26 +192,22 @@ class _TitleComponentPhoneWidgetState extends State<TitleComponentPhoneWidget> {
                   ),
                 ),
               ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
-                child: AutoSizeText(
-                  'Contact Us',
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        font: GoogleFonts.meddon(
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .fontWeight,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                        ),
-                        fontSize: 10.0,
-                        letterSpacing: 0.0,
+              AutoSizeText(
+                'Contact Us',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.meddon(
                         fontWeight:
                             FlutterFlowTheme.of(context).bodyMedium.fontWeight,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                ),
+                      fontSize: 10.0,
+                      letterSpacing: 0.0,
+                      fontWeight:
+                          FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                    ),
               ),
             ],
           ),

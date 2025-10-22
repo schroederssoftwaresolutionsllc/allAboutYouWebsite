@@ -1,5 +1,4 @@
 import '/components/title_component_phone_widget.dart';
-import '/components/title_component_web_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -54,30 +53,14 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             children: [
               Row(
                 mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Expanded(
-                    child: Container(
-                      height: MediaQuery.sizeOf(context).height * 0.3,
-                      child: Builder(
-                        builder: (context) {
-                          if (isWeb) {
-                            return Visibility(
-                              visible: isWeb,
-                              child: wrapWithModel(
-                                model: _model.titleComponentWebModel,
-                                updateCallback: () => safeSetState(() {}),
-                                child: TitleComponentWebWidget(),
-                              ),
-                            );
-                          } else {
-                            return wrapWithModel(
-                              model: _model.titleComponentPhoneModel,
-                              updateCallback: () => safeSetState(() {}),
-                              child: TitleComponentPhoneWidget(),
-                            );
-                          }
-                        },
-                      ),
+                  Container(
+                    height: 200.0,
+                    child: wrapWithModel(
+                      model: _model.titleComponentPhoneModel,
+                      updateCallback: () => safeSetState(() {}),
+                      child: TitleComponentPhoneWidget(),
                     ),
                   ),
                 ],

@@ -106,8 +106,8 @@ class _TitleComponentWebWidgetState extends State<TitleComponentWebWidget> {
         Padding(
           padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 10.0),
           child: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 50.0, 0.0),
