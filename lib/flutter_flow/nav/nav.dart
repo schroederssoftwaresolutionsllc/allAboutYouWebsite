@@ -54,6 +54,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: GalleryWidget.routeName,
           path: GalleryWidget.routePath,
           builder: (context, params) => GalleryWidget(),
+        ),
+        FFRoute(
+          name: PhoneTitleWidget.routeName,
+          path: PhoneTitleWidget.routePath,
+          builder: (context, params) => PhoneTitleWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
