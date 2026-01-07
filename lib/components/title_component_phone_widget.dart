@@ -133,32 +133,22 @@ class _TitleComponentPhoneWidgetState extends State<TitleComponentPhoneWidget> {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              InkWell(
-                splashColor: Colors.transparent,
-                focusColor: Colors.transparent,
-                hoverColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onTap: () async {
-                  context.pushNamed(GalleryWidget.routeName);
-                },
-                child: AutoSizeText(
-                  'Gallery',
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        font: GoogleFonts.meddon(
-                          fontWeight: FlutterFlowTheme.of(context)
-                              .bodyMedium
-                              .fontWeight,
-                          fontStyle:
-                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
-                        ),
-                        fontSize: 10.0,
-                        letterSpacing: 0.0,
+              AutoSizeText(
+                'Gallery',
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      font: GoogleFonts.meddon(
                         fontWeight:
                             FlutterFlowTheme.of(context).bodyMedium.fontWeight,
                         fontStyle:
                             FlutterFlowTheme.of(context).bodyMedium.fontStyle,
                       ),
-                ),
+                      fontSize: 10.0,
+                      letterSpacing: 0.0,
+                      fontWeight:
+                          FlutterFlowTheme.of(context).bodyMedium.fontWeight,
+                      fontStyle:
+                          FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                    ),
               ),
               Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 30.0, 0.0),
@@ -168,7 +158,7 @@ class _TitleComponentPhoneWidgetState extends State<TitleComponentPhoneWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    context.pushNamed(PackagesWidget.routeName);
+                    context.pushNamed(WeddingPackagesWidget.routeName);
                   },
                   child: AutoSizeText(
                     'Wedding Packages',

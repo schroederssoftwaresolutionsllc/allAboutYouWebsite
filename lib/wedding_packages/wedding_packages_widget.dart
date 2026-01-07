@@ -9,22 +9,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'gallery_model.dart';
-export 'gallery_model.dart';
+import 'wedding_packages_model.dart';
+export 'wedding_packages_model.dart';
 
-class GalleryWidget extends StatefulWidget {
-  const GalleryWidget({super.key});
+class WeddingPackagesWidget extends StatefulWidget {
+  const WeddingPackagesWidget({super.key});
 
-  static String routeName = 'Gallery';
-  static String routePath = '/gallery';
+  static String routeName = 'WeddingPackages';
+  static String routePath = '/WeddingPackages';
 
   @override
-  State<GalleryWidget> createState() => _GalleryWidgetState();
+  State<WeddingPackagesWidget> createState() => _WeddingPackagesWidgetState();
 }
 
-class _GalleryWidgetState extends State<GalleryWidget>
+class _WeddingPackagesWidgetState extends State<WeddingPackagesWidget>
     with TickerProviderStateMixin {
-  late GalleryModel _model;
+  late WeddingPackagesModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -33,7 +33,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => GalleryModel());
+    _model = createModel(context, () => WeddingPackagesModel());
 
     animationsMap.addAll({
       'carouselOnPageLoadAnimation': AnimationInfo(
@@ -1229,8 +1229,8 @@ class _GalleryWidgetState extends State<GalleryWidget>
               enableInfiniteScroll: true,
               scrollDirection: Axis.horizontal,
               autoPlay: true,
-              autoPlayAnimationDuration: Duration(milliseconds: 1000),
-              autoPlayInterval: Duration(milliseconds: (1000 + 3000)),
+              autoPlayAnimationDuration: Duration(milliseconds: 2500),
+              autoPlayInterval: Duration(milliseconds: (2500 + 4000)),
               autoPlayCurve: Curves.linear,
               pauseAutoPlayInFiniteScroll: true,
               onPageChanged: (index, _) => _model.carouselCurrentIndex = index,

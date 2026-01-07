@@ -1,8 +1,10 @@
 import '/components/title_component_phone_widget.dart';
+import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'home_page_model.dart';
 export 'home_page_model.dart';
 
@@ -16,15 +18,33 @@ class HomePageWidget extends StatefulWidget {
   State<HomePageWidget> createState() => _HomePageWidgetState();
 }
 
-class _HomePageWidgetState extends State<HomePageWidget> {
+class _HomePageWidgetState extends State<HomePageWidget>
+    with TickerProviderStateMixin {
   late HomePageModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  final animationsMap = <String, AnimationInfo>{};
 
   @override
   void initState() {
     super.initState();
     _model = createModel(context, () => HomePageModel());
+
+    animationsMap.addAll({
+      'columnOnPageLoadAnimation': AnimationInfo(
+        trigger: AnimationTrigger.onPageLoad,
+        effectsBuilder: () => [
+          FadeEffect(
+            curve: Curves.easeIn,
+            delay: 0.0.ms,
+            duration: 2000.0.ms,
+            begin: 0.0,
+            end: 1.0,
+          ),
+        ],
+      ),
+    });
 
     WidgetsBinding.instance.addPostFrameCallback((_) => safeSetState(() {}));
   }
@@ -78,8 +98,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           items: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
-                              child: Image.network(
-                                'https://picsum.photos/seed/391/600',
+                              child: Image.asset(
+                                'assets/images/Cake.jpg',
                                 width: 200.0,
                                 height: MediaQuery.sizeOf(context).height * 0.8,
                                 fit: BoxFit.cover,
@@ -87,8 +107,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             ),
                             ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
-                              child: Image.network(
-                                'https://picsum.photos/seed/297/600',
+                              child: Image.asset(
+                                'assets/images/Moms_Wedding.jpg',
                                 width: 200.0,
                                 height: 200.0,
                                 fit: BoxFit.cover,
@@ -96,8 +116,8 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             ),
                             ClipRRect(
                               borderRadius: BorderRadius.circular(8.0),
-                              child: Image.network(
-                                'https://picsum.photos/seed/267/600',
+                              child: Image.asset(
+                                'assets/images/Jar.jpg',
                                 width: 200.0,
                                 height: 200.0,
                                 fit: BoxFit.cover,
@@ -116,9 +136,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             scrollDirection: Axis.horizontal,
                             autoPlay: true,
                             autoPlayAnimationDuration:
-                                Duration(milliseconds: 4000),
+                                Duration(milliseconds: 1000),
                             autoPlayInterval:
-                                Duration(milliseconds: (4000 + 1000)),
+                                Duration(milliseconds: (1000 + 3000)),
                             autoPlayCurve: Curves.linear,
                             pauseAutoPlayInFiniteScroll: true,
                             onPageChanged: (index, _) =>
@@ -131,7 +151,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                 ],
               ),
             ],
-          ),
+          ).animateOnPageLoad(animationsMap['columnOnPageLoadAnimation']!),
         ),
       ),
     );

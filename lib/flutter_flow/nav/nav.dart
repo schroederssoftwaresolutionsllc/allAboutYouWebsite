@@ -51,9 +51,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => PackagesWidget(),
         ),
         FFRoute(
-          name: GalleryWidget.routeName,
-          path: GalleryWidget.routePath,
-          builder: (context, params) => GalleryWidget(),
+          name: WeddingPackagesWidget.routeName,
+          path: WeddingPackagesWidget.routePath,
+          builder: (context, params) => WeddingPackagesWidget(),
         ),
         FFRoute(
           name: PhoneTitleWidget.routeName,
